@@ -22,7 +22,7 @@ const bank = document.getElementById('currentDollarAmt');
 (amazonPaid.checked) ? amazonAmt = 0 : amazonAmt = 16;
 (carInsurancePaid.checked) ? carInsuranceAmt = 0 : carInsuranceAmt = 100;
 console.log(`You owe internet: $${internetAmt}.`)
-console.log(`You owe celPhone: $${celPhoneAmt}.`)
+console.log(`You owe Cel Phone: $${celPhoneAmt}.`)
 console.log(`You owe Netflix: $${netflixAmt}.`)
 console.log(`You owe audible.com: $${audibleAmt}.`)
 console.log(`You owe Amazon: $${amazonAmt}.`)
