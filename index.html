@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Budget calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="leftSide">
+        <div class="input">
+            Current dollar amount:
+            <input type="text" id="currentDollarAmt" placeholder="Current Dollar Amount">
+        </div>
+        <div class="calculateBudget">
+            <div class="dates">
+                <div class="date">1st</div>
+                <div class="date">7th</div>
+                <div class="date">8th</div>
+                <div class="date">11th</div>
+                <div class="date">11th</div>
+                <div class="date">18th</div>
+                <div class="date">20th</div>
+            </div>
+            <div class="bills">
+                <div class="bill">Internet</div>
+                <div class="bill">celPhone</div>
+                <div class="bill">Netflix</div>
+                <div class="bill">Audible</div>
+                <div class="bill">Amazon</div>
+                <div class="bill">Car Insurance</div>
+            </div>
+            <div class="checkboxes">
+                <input type="checkbox" id="internetPaid">
+                <input type="checkbox" id="celPhonePaid">
+                <input type="checkbox" id="netflixPaid">
+                <input type="checkbox" id="audiblePaid">
+                <input type="checkbox" id="amazonPaid">
+                <input type="checkbox" id="carInsurancePaid">
+            </div>
+        </div>
+        <div class="daysUntilPayday">Days until payday:
+            <input type="text" id="daysLeft" placeholder="Days until payday">
+        </div>
+        <button class="button" onclick="checkBills()">Calculate!</button>
+        <div class="leftover">
+            Dollars per day leftover:<div class="output"></div>
+        </div>
+    </div>
+    <div class="rightSide"></div>
+<script src="script.js"></script>
+</body>
+</html>
