@@ -21,10 +21,10 @@ const bank = document.getElementById('currentDollarAmt');
 (audiblePaid.checked) ? audibleAmt = 0 : audibleAmt = 15;
 (amazonPaid.checked) ? amazonAmt = 0 : amazonAmt = 16;
 (carInsurancePaid.checked) ? carInsuranceAmt = 0 : carInsuranceAmt = 100;
-console.log(`You owe internet: $${internetAmt}.`)
+console.log(`You owe Internet: $${internetAmt}.`)
 console.log(`You owe Cel Phone: $${celPhoneAmt}.`)
 console.log(`You owe Netflix: $${netflixAmt}.`)
-console.log(`You owe audible.com: $${audibleAmt}.`)
+console.log(`You owe Audible: $${audibleAmt}.`)
 console.log(`You owe Amazon: $${amazonAmt}.`)
 console.log(`You owe Car Insurance: $${carInsuranceAmt}.`)
 
