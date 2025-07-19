@@ -1,3 +1,11 @@
+let bills = [
+    { entity: "Zito Media", type: "Internet", amount: 65.00, dueDay: 1 },
+    { entity: "AT&T", type: "Cell Phone", amount: 56.00, dueDay: 7 },
+    { entity: "Netflix", type: "Streaming Service", amount: 10.00, dueDay: 8 },
+    { entity: "Youtube Music", type: "Media", amount: 15.00, dueDay: 11 },
+    { entity: "Amazon", type: "Shopping", amount: 16, dueDay: 18 },
+    { entity: "Geico", type: "Car Insurance", amount: 100, dueDay: 20 },
+];
 
 let internetAmt = 65;
 let celPhoneAmt = 56;
@@ -39,3 +47,30 @@ const output = document.querySelector('.output');
 output.textContent = `${dolPerDay.toFixed(2)}`;
 
 }
+
+function getBillInfo(bill) {
+    let daysUntilDue = getDaysUntilDue(bill);
+
+    let dueDayInfo = '';
+    if (daysUntilDue == 0) {
+        dueDayInfo = 'today'
+    }
+    else if (daysUntilDue > 0) {
+        dueDayInfo = `in ${daysUntilDue} day${daysUntilDue == 1 ? '' : 's'}`
+    } else if (daysUntilDue < 0) {
+        dueDayInfo = `${Math.abs(daysUntilDue)} day${daysUntilDue == 1 ? '' : 's'} ago`
+    }
+
+    return `${bill.entity} (${bill.type}) $${bill.amount.toFixed(2)} due ${dueDayInfo}`;
+}
+
+function getDaysUntilDue(bill) {
+    let currentDayOfMonth = new Date().getDay();
+    let dueDay = bill.dueDay;
+
+    return dueDay - currentDayOfMonth;
+}
+
+bills.forEach(bill => {
+    console.log(getBillInfo(bill))
+});
